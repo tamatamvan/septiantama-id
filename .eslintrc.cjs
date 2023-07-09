@@ -10,11 +10,5 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
-  ignorePatterns: [
-    'node_modules',
-    '.next',
-    'out',
-    '**/*.cjs',
-    'next.config.js',
-  ],
+  ignorePatterns: ['node_modules', '.next', 'out', '**/*.cjs', '*.config.js'],
 };
