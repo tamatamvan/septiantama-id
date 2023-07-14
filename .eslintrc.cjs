@@ -8,7 +8,7 @@ module.exports = {
   extends: [
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   ignorePatterns: ['node_modules', '.next', 'out', '**/*.cjs', '*.config.js'],
 };
