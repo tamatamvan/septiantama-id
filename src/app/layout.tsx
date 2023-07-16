@@ -1,5 +1,14 @@
 import './globals.css';
 
+import { Atkinson_Hyperlegible } from 'next/font/google';
+
+const bodyFont = Atkinson_Hyperlegible({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -7,12 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
+      <body className={bodyFont.className}>{children}</body>
     </html>
   );
 }
