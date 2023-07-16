@@ -1,3 +1,5 @@
+import type { ComponentProps } from 'react';
+
 import Image from 'next/image';
 
 import { twMerge } from 'tailwind-merge';
@@ -6,15 +8,7 @@ import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
 
 import { Heading } from '~/components/Heading/Heading';
 
-type HeaderNavLinkProps = {
-  href: string;
-  children: React.ReactNode;
-  className?: string;
-  target?: '_self' | '_blank' | '_parent' | '_top';
-  rel?: string;
-};
-
-function HeaderNavLink({ href, children, className }: HeaderNavLinkProps) {
+function HeaderNavLink({ href, children, className }: ComponentProps<'a'>) {
   return (
     <a
       href={href}
@@ -60,7 +54,7 @@ export function HeaderNav() {
             My career journey so far 🛣️
           </HeaderNavLink>
           <HeaderNavLink
-            href=""
+            href="/blog"
             className="absolute bottom-0 left-0"
             target="_blank"
             rel="noopener noreferrer"
@@ -68,7 +62,7 @@ export function HeaderNav() {
             Peek into my mind 👀
           </HeaderNavLink>
           <HeaderNavLink
-            href=""
+            href="#about-me"
             className="absolute bottom-0 right-0 hover:scale-100 hover:border-0"
           >
             <ArrowDownCircleIcon className="hover:border-b-none mr-2 inline-block h-8 w-8 animate-bounce" />
