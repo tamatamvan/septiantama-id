@@ -1,9 +1,19 @@
-import type { ComponentProps } from 'react';
+import type { ComponentProps, ElementType } from 'react';
 
-export function Section({ id, children, ...rest }: ComponentProps<'section'>) {
+type SectionProps = {
+  as?: 'section' | 'div' | 'footer';
+} & ComponentProps<'section'>;
+
+export function Section({
+  as = 'section',
+  id,
+  children,
+  ...rest
+}: SectionProps) {
+  const Component = as as ElementType;
   return (
-    <section id={id} {...rest}>
+    <Component id={id} {...rest}>
       <div className="container mx-auto px-4 py-24 text-white">{children}</div>
-    </section>
+    </Component>
   );
 }
