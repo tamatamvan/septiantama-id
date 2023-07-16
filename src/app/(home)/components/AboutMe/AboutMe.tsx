@@ -1,9 +1,6 @@
 import { Heading } from '~/components/Heading/Heading';
 import { Section } from '~/components/Section';
-
-function StyledParagrah({ children }: { children: React.ReactNode }) {
-  return <p className="mb-6">{children}</p>;
-}
+import { Paragraph } from '~/components/Paragraph';
 
 export function AboutMe() {
   return (
@@ -11,19 +8,19 @@ export function AboutMe() {
       <Heading as="h2" className="mb-8 text-3xl underline">
         A lil bit about me
       </Heading>
-      <StyledParagrah>
+      <Paragraph className="max-w-prose">
         I'm an experienced fullstack software engineer with main expertise in
         front-end web development. <br /> A lifelong learner that loves
         experimenting with new things, sharing knowledge with others, and help
         to empower people in reaching their goals and potential.
-      </StyledParagrah>
-      <StyledParagrah>
+      </Paragraph>
+      <Paragraph>
         I enjoy coding 💻, cooking 🍳, poetry✍🏼, and bonding with my cat 🐈‍⬛.
-      </StyledParagrah>
-      <StyledParagrah>
+      </Paragraph>
+      <Paragraph>
         Sometimes I play FIFA & Football Manager ⚽️🎮 I also watch NBA 🏀
         <br />I love the tactical and analytical side of the sports. 📊
-      </StyledParagrah>
+      </Paragraph>
     </Section>
   );
 }
