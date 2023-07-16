@@ -18,7 +18,7 @@ export function AboutMe() {
         to empower people in reaching their goals and potential.
       </StyledParagrah>
       <StyledParagrah>
-        I enjoy coding 💻, cooking 🍳, poetry✍🏼, and playing with my cat 🐈‍⬛.
+        I enjoy coding 💻, cooking 🍳, poetry✍🏼, and bonding with my cat 🐈‍⬛.
       </StyledParagrah>
       <StyledParagrah>
         Sometimes I play FIFA & Football Manager ⚽️🎮 I also watch NBA 🏀
