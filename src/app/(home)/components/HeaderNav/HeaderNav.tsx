@@ -4,14 +4,22 @@ import Image from 'next/image';
 
 import { twMerge } from 'tailwind-merge';
 
+import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
 
 import { Heading } from '~/components/Heading/Heading';
-import { ExternalLinkIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
-function HeaderNavLink({ href, children, className }: ComponentProps<'a'>) {
+function HeaderNavLink({
+  href,
+  children,
+  className,
+  external,
+  ...rest
+}: ComponentProps<typeof Link> & ComponentProps<'a'> & { external?: boolean }) {
+  const Component = external ? 'a' : Link;
   return (
-    <a
+    <Component
       href={href}
       className={twMerge(
         'z-30 block border-b-0 text-lg uppercase text-white transition-all ease-linear hover:-translate-y-1 hover:scale-110 hover:border-b-2 hover:border-b-white',
@@ -19,7 +27,7 @@ function HeaderNavLink({ href, children, className }: ComponentProps<'a'>) {
       )}
     >
       {children}
-    </a>
+    </Component>
   );
 }
 
@@ -51,6 +59,7 @@ export function HeaderNav() {
             className="group absolute right-0 top-0 flex"
             target="_blank"
             rel="noopener noreferrer"
+            external
           >
             🛣️ Resume{' '}
             <ExternalLinkIcon className="ml-1 inline-block h-4 w-4 self-start text-white" />
@@ -66,6 +75,7 @@ export function HeaderNav() {
           <HeaderNavLink
             href="#about-me"
             className="absolute bottom-0 right-0 hover:scale-100 hover:border-0"
+            external
           >
             <ArrowDownCircleIcon className="hover:border-b-none mr-2 inline-block h-10 w-10 animate-bounce" />
           </HeaderNavLink>
