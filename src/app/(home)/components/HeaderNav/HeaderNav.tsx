@@ -35,7 +35,7 @@ export function HeaderNav() {
       <div className="absolute z-20 flex h-full w-full items-center justify-center bg-neutral-950/50">
         <Heading
           as="h1"
-          className="text-center text-3xl text-white animate-in zoom-in duration-700 sm:text-4xl md:text-5xl"
+          className="text-center text-3xl text-white sm:text-4xl md:text-5xl"
         >
           {"Hi, I'm Tama "}{' '}
           <span className="inline-block animate-waving-hand">👋🏻</span>
