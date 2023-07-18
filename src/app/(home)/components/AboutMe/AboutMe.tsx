@@ -1,7 +1,8 @@
+import Image from 'next/image';
+
 import { Heading } from '~/components/Heading/Heading';
 import { Section } from '~/components/Section';
 import { Paragraph } from '~/components/Paragraph';
-import Image from 'next/image';
 
 export function AboutMe() {
   return (
@@ -12,13 +13,19 @@ export function AboutMe() {
       <div className="flex flex-wrap">
         <div>
           <Paragraph className="max-w-prose">
-            {
-              "I'm an experienced fullstack software engineer with main expertise in front-end web development."
-            }{' '}
-            <br />
-            {
-              'A lifelong learner that loves experimenting with new things, sharing knowledge with others, and help to empower people in reaching their goals and potential. 🚀'
-            }
+            {"I'm"} an{' '}
+            <a
+              href={process.env.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold underline"
+            >
+              experienced fullstack software engineer
+            </a>{' '}
+            with main expertise in front-end web development. <br />A lifelong
+            learner that loves experimenting with new things, sharing knowledge
+            with others, and help to empower people in reaching their goals and
+            potential. 🚀
           </Paragraph>
           <Paragraph>
             I enjoy coding 💻, cooking 🍳, poetry✍🏼, and bonding with my cat 🐈‍⬛.
