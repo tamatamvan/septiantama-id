@@ -25,6 +25,7 @@ function HeaderNavLink({
         'z-30 block border-b-0 text-lg uppercase text-white transition-all ease-linear hover:-translate-y-1 hover:scale-110 hover:border-b-2 hover:border-b-white',
         className,
       )}
+      {...rest}
     >
       {children}
     </Component>
