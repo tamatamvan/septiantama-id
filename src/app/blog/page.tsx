@@ -10,7 +10,7 @@ export default function BlogPage() {
         Coming soon...
       </Heading>
       <Image
-        src="/kurokocchi_playing_yarn.svg"
+        src="/kurokocchi_playing_yarn.png"
         alt="Kurokocchi plays"
         width={320}
         height={320}

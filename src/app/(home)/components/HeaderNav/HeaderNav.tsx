@@ -27,7 +27,7 @@ export function HeaderNav() {
   return (
     <div className="relative h-[100svh] w-full">
       <Image
-        src="/hero_bg.jpg"
+        src="/hero_bg_1.jpg"
         alt="Septian Tama"
         className="h-full w-full object-cover grayscale"
         fill={true}

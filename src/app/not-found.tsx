@@ -13,7 +13,7 @@ export default function BlogPage() {
         {"Ummm... Seems that you're lost"}
       </Heading>
       <Image
-        src="/404_getting_lost.svg"
+        src="/404_getting_lost.png"
         alt="404 Not Found"
         width={320}
         height={480}
