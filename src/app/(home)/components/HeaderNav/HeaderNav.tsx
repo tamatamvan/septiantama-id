@@ -7,13 +7,14 @@ import { twMerge } from 'tailwind-merge';
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
 
 import { Heading } from '~/components/Heading/Heading';
+import { ExternalLinkIcon } from '@radix-ui/react-icons';
 
 function HeaderNavLink({ href, children, className }: ComponentProps<'a'>) {
   return (
     <a
       href={href}
       className={twMerge(
-        'z-30 block border-b-0 font-bold text-white transition-all ease-linear hover:-translate-y-1 hover:scale-110 hover:border-b-2 hover:border-b-white',
+        'z-30 block border-b-0 text-lg uppercase text-white transition-all ease-linear hover:-translate-y-1 hover:scale-110 hover:border-b-2 hover:border-b-white',
         className,
       )}
     >
@@ -24,7 +25,7 @@ function HeaderNavLink({ href, children, className }: ComponentProps<'a'>) {
 
 export function HeaderNav() {
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative h-[100svh] w-full">
       <Image
         src="/hero_bg.jpg"
         alt="Septian Tama"
@@ -47,11 +48,12 @@ export function HeaderNav() {
         <div className="relative h-full">
           <HeaderNavLink
             href={process.env.resumeUrl as string}
-            className="absolute right-0 top-0"
+            className="group absolute right-0 top-0 flex"
             target="_blank"
             rel="noopener noreferrer"
           >
-            My career journey so far 🛣️
+            🛣️ Resume{' '}
+            <ExternalLinkIcon className="ml-1 inline-block h-4 w-4 self-start text-white" />
           </HeaderNavLink>
           <HeaderNavLink
             href="/blog"
@@ -59,13 +61,13 @@ export function HeaderNav() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Peek into my mind 👀
+            ✍️ Blog
           </HeaderNavLink>
           <HeaderNavLink
             href="#about-me"
             className="absolute bottom-0 right-0 hover:scale-100 hover:border-0"
           >
-            <ArrowDownCircleIcon className="hover:border-b-none mr-2 inline-block h-8 w-8 animate-bounce" />
+            <ArrowDownCircleIcon className="hover:border-b-none mr-2 inline-block h-10 w-10 animate-bounce" />
           </HeaderNavLink>
         </div>
       </div>

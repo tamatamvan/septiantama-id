@@ -5,7 +5,7 @@ import { Paragraph } from '~/components/Paragraph';
 
 export default function BlogPage() {
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center bg-black px-8 text-white">
+    <div className="flex h-[100svh] w-full flex-col items-center justify-center bg-black px-8 text-white">
       <Heading as="h1" className="mb-4 text-4xl sm:text-5xl md:text-6xl">
         404
       </Heading>
