@@ -65,12 +65,7 @@ export function HeaderNav() {
             🛣️ Resume{' '}
             <ExternalLinkIcon className="ml-1 inline-block h-4 w-4 self-start text-white" />
           </HeaderNavLink>
-          <HeaderNavLink
-            href="/blog"
-            className="absolute bottom-0 left-0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <HeaderNavLink href="/blog" className="absolute bottom-0 left-0">
             ✍️ Blog
           </HeaderNavLink>
           <HeaderNavLink
