@@ -10,7 +10,7 @@ export function ContactMe() {
           Are you thinking what I'm thinking?
         </Heading>
         <Paragraph className="max-w-prose">
-          Since you've come this far, maybe there's something about me that
+          Since you've come this far, I assume there's something about me that
           pique your interest?
         </Paragraph>
         <Paragraph className="max-w-prose">
