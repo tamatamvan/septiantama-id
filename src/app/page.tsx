@@ -166,7 +166,7 @@ export default function Home() {
               <br />
             </Paragraph>
             <Paragraph>
-              <span className="font-bold">Hit me up!</span>
+              <span className="font-bold">Hit me up!</span>{' '}
               {"Let's grab some coffee and discuss about it! ☕"}
             </Paragraph>
             <Heading as="h3" className="my-8 text-xl font-bold">
