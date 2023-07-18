@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react';
+import React, { ComponentProps } from 'react';
 import { Metadata } from 'next';
 
 import Link from 'next/link';
@@ -46,6 +46,21 @@ function HeaderNavLink({
     >
       {children}
     </Component>
+  );
+}
+
+type SocialLinkProps = {
+  children: React.ReactNode;
+  href: string;
+};
+
+function SocialLink({ children, href }: SocialLinkProps) {
+  return (
+    <li className="mb-2 flex items-center">
+      <a href={href} target="_blank" rel="noreferrer noopener">
+        {children}
+      </a>
+    </li>
   );
 }
 
@@ -158,36 +173,26 @@ export default function Home() {
               Feel free to reach me out through:
             </Heading>
             <ul>
-              <li className="mb-2 flex items-center">
-                <a href="mailto:me@septiantama.id">
-                  <EnvelopeClosedIcon className="mr-2 inline-block h-6 w-6" />{' '}
-                  me@septiantama.id
-                </a>
-              </li>
-              <li className="mb-2 flex items-center">
-                <a href="https://github.com/tamatamvan">
-                  <GitHubLogoIcon className="mr-2 inline-block h-6 w-6" />{' '}
-                  @tamatamvan
-                </a>
-              </li>
-              <li className="mb-2 flex items-center">
-                <a href="https://linkedin.com/in/septian-tama">
-                  <LinkedInLogoIcon className="mr-2 inline-block h-6 w-6" />{' '}
-                  Septian Tama
-                </a>
-              </li>
-              <li className="mb-2 flex items-center">
-                <a href="https://twitter.com/s_ai_tama">
-                  <TwitterLogoIcon className="mr-2 inline-block h-6 w-6" />{' '}
-                  @s_ai_tama
-                </a>
-              </li>
-              <li className="mb-2 flex items-center">
-                <a href="https://instagram.com/s_ai_tama">
-                  <InstagramLogoIcon className="mr-2 inline-block h-6 w-6" />{' '}
-                  @s_ai_tama
-                </a>
-              </li>
+              <SocialLink href="mailto:me@septiantama.id">
+                <EnvelopeClosedIcon className="mr-2 inline-block h-6 w-6" />{' '}
+                me@septiantama.id
+              </SocialLink>
+              <SocialLink href="https://github.com/tamatamvan">
+                <GitHubLogoIcon className="mr-2 inline-block h-6 w-6" />{' '}
+                @tamatamvan
+              </SocialLink>
+              <SocialLink href="https://linkedin.com/in/septian-tama">
+                <LinkedInLogoIcon className="mr-2 inline-block h-6 w-6" />{' '}
+                Septian Tama
+              </SocialLink>
+              <SocialLink href="https://twitter.com/s_ai_tama">
+                <TwitterLogoIcon className="mr-2 inline-block h-6 w-6" />{' '}
+                @s_ai_tama
+              </SocialLink>
+              <SocialLink href="https://instagram.com/s_ai_tama">
+                <InstagramLogoIcon className="mr-2 inline-block h-6 w-6" />{' '}
+                @s_ai_tama
+              </SocialLink>
             </ul>
           </div>
         </div>
