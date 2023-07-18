@@ -10,7 +10,7 @@ export default function BlogPage() {
         404
       </Heading>
       <Heading as="h2" className="text-center text-2xl sm:text-3xl md:text-4xl">
-        Ummm... Seems that you're lost
+        {"Ummm... Seems that you're lost"}
       </Heading>
       <Image
         src="/404_getting_lost.svg"
@@ -20,8 +20,9 @@ export default function BlogPage() {
         objectFit="contain"
       />
       <Paragraph className="my-8 max-w-prose text-center">
-        The page you're looking for doesn't exist. Maybe check the URL again? Or
-        you can also...
+        {
+          "The page you're looking for doesn't exist. Maybe check the URL again? Or you can also..."
+        }
       </Paragraph>
       <Link
         href="/"

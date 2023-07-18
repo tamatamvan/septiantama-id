@@ -16,19 +16,20 @@ export function ContactMe() {
       <div className="flex">
         <div>
           <Heading as="h2" className="mb-8 text-3xl underline">
-            Are you thinking what I'm thinking?
+            {"Are you thinking what I'm thinking?"}
           </Heading>
           <Paragraph className="max-w-prose">
-            Since you've come this far, I assume there's something about me that
-            pique your interest?
+            {
+              "Since you've come this far, I assume there's something about me that pique your interest?"
+            }
           </Paragraph>
           <Paragraph className="max-w-prose">
             Need help with anything? Cool project? Exciting collaboration?{' '}
             <br />
           </Paragraph>
           <Paragraph>
-            <span className="font-bold">Hit me up!</span> Let's grab some coffee
-            and discuss about it! ☕
+            <span className="font-bold">Hit me up!</span>
+            {"Let's grab some coffee and discuss about it! ☕"}
           </Paragraph>
           <Heading as="h3" className="my-8 text-xl font-bold">
             Feel free to reach me out through:

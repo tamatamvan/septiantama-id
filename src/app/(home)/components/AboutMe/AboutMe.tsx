@@ -12,10 +12,13 @@ export function AboutMe() {
       <div className="flex flex-wrap">
         <div>
           <Paragraph className="max-w-prose">
-            I'm an experienced fullstack software engineer with main expertise
-            in front-end web development. <br /> A lifelong learner that loves
-            experimenting with new things, sharing knowledge with others, and
-            help to empower people in reaching their goals and potential.
+            {
+              "I'm an experienced fullstack software engineer with main expertise in front-end web development."
+            }{' '}
+            <br />
+            {
+              'A lifelong learner that loves experimenting with new things, sharing knowledge with others, and help to empower people in reaching their goals and potential. 🚀'
+            }
           </Paragraph>
           <Paragraph>
             I enjoy coding 💻, cooking 🍳, poetry✍🏼, and bonding with my cat 🐈‍⬛.
