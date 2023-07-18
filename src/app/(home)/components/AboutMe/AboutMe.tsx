@@ -32,7 +32,7 @@ export function AboutMe() {
           </Paragraph>
           <Paragraph>
             Sometimes I play FIFA & Football Manager ⚽️🎮 I also watch NBA 🏀
-            <br />I love the tactical and analytical side of the sports. 📊
+            <br />I love the tactical and analytical aspects of the sports. 📊
           </Paragraph>
         </div>
         <Image
