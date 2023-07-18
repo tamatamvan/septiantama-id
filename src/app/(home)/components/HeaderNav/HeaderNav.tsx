@@ -43,7 +43,7 @@ export function HeaderNav() {
           {'Nice to meet you!'}
         </Heading>
       </div>
-      <div className="container mx-auto h-full px-4 py-16">
+      <div className="container mx-auto h-full px-8 py-16">
         <div className="relative h-full">
           <HeaderNavLink
             href={process.env.resumeUrl as string}

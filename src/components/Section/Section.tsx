@@ -13,7 +13,7 @@ export function Section({
   const Component = as as ElementType;
   return (
     <Component id={id} {...rest}>
-      <div className="container mx-auto px-4 py-24 text-white">{children}</div>
+      <div className="container mx-auto px-8 py-24 text-white">{children}</div>
     </Component>
   );
 }
