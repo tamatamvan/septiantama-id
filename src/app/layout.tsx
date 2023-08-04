@@ -17,8 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`animate-in fade-in duration-500 ${bodyFont.className}`}>
-        {children}
+      <body>
+        <div
+          className={`bg-black text-white animate-in fade-in duration-500 ${bodyFont.className}`}
+        >
+          {children}
+        </div>
         <Analytics />
       </body>
     </html>

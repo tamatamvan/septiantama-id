@@ -1,31 +1,46 @@
+import { ArrowRightIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Heading } from '~/components/Heading/Heading';
 import { Paragraph } from '~/components/Paragraph';
+import { PostMetadata, getAllPublished } from '~/lib/notion';
 
-export default function BlogPage() {
+type PostCardProps = {
+  post: PostMetadata;
+};
+
+function PostCard({ post }: PostCardProps) {
   return (
-    <div className="flex h-[100svh] w-full flex-col items-center justify-center bg-black px-8 text-white">
-      <Heading as="h1" className="text-4xl">
-        Coming soon...
+    <Link
+      href={`/blog/${post.slug}`}
+      className="my-4 flex w-full cursor-pointer flex-col border-b border-solid border-white pb-4 transition-all last:border-b-0 hover:scale-105"
+    >
+      <Heading as="h2" className="text-2xl">
+        {post.title}
       </Heading>
-      <Image
-        src="/kurokocchi_playing_yarn.png"
-        alt="Kurokocchi plays"
-        width={320}
-        height={320}
-        objectFit="contain"
-      />
-      <Paragraph className="my-8 max-w-prose text-center">
-        Thank you for your interest, the blog is still under construction.
-        <br /> Until then, how about we play with Kurokocchi?
-      </Paragraph>
-      <Link
-        href="/"
-        className="block border-b-0 font-bold text-white transition-all ease-linear hover:-translate-y-1 hover:scale-110 hover:border-b-2 hover:border-b-white"
-      >
-        Back to homepage
-      </Link>
+      <Paragraph className="mb-4">{post.summary}</Paragraph>
+      <button className="-mt-2 flex grow-0 items-center font-bold">
+        Read more <ArrowRightIcon className="ml-2 stroke-2" />
+      </button>
+    </Link>
+  );
+}
+
+export default async function BlogPage() {
+  const posts = await getAllPublished();
+
+  return (
+    <div className="w-full px-8 text-white">
+      <div className="container mx-auto max-w-prose px-4">
+        <div className="flex items-center py-12">
+          <Heading as="h1" className="text-4xl">
+            Blog
+          </Heading>
+        </div>
+        {posts.map((post) => (
+          <PostCard post={post} key={post.id} />
+        ))}
+      </div>
     </div>
   );
 }
