@@ -89,7 +89,7 @@ export default function Home() {
         <div className="container mx-auto h-full px-8 py-16">
           <div className="relative h-full">
             <HeaderNavLink
-              href={process.env.resumeUrl as string}
+              href="/resume"
               className="group absolute right-0 top-0 flex"
               target="_blank"
               rel="noopener noreferrer"

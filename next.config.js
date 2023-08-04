@@ -1,8 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    resumeUrl:
-      'https://drive.google.com/file/d/1W9KrTMn3f46woD-SGpl49Hj5GrXthOJh/view?usp=sharing',
+  async redirects() {
+    return [
+      {
+        source: '/portfolio',
+        destination: process.env.NEXT_PUBLIC_PORTFOLIO_URL,
+        permanent: false,
+      },
+      {
+        source: '/resume',
+        destination: process.env.NEXT_PUBLIC_RESUME_URL,
+        permanent: false,
+      },
+    ];
   },
 };
 
