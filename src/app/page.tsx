@@ -121,7 +121,7 @@ export default function Home() {
             <Paragraph className="max-w-prose">
               {"I'm"} an{' '}
               <a
-                href={process.env.resumeUrl}
+                href="/resume"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-bold underline"
