@@ -73,6 +73,7 @@ export default function Home() {
           alt="Septian Tama"
           className="h-full w-full object-cover grayscale"
           fill={true}
+          priority
         />
         <div className="z-10 bg-gradient-radial mix-blend-soft-light"></div>
         <div className="absolute z-20 flex h-full w-full items-center justify-center bg-neutral-950/50">
